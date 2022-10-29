@@ -1,0 +1,110 @@
+.life_info-root {
+  min-height: calc(100vh - 85px);
+  background-color: #e6e6e6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  padding: 0px 130px;
+
+  @media screen and (max-width: 1200px) {
+    padding: 0px 60px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0px 30px;
+    gap: 40px;
+  }
+
+  .title {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    .divider {
+      height: 5px;
+      background-color: #bebebe;
+      width: 200px;
+    }
+  }
+
+  .info_sections {
+    display: flex;
+    gap: 100px;
+    margin-bottom: 50px;
+
+    @media screen and (max-width: 768px) {
+      gap: 50px;
+      width: 100%;
+      flex-direction: column;
+    }
+
+    .section {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      .steps {
+        display: flex;
+        gap: 10px;
+        .step {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .ball {
+            height: 14px;
+            width: 14px;
+            border: 2px solid black;
+            border-radius: 100%;
+          }
+
+          .line {
+            height: 60px;
+            margin-top: 10px;
+            background: black;
+            width: 2px;
+          }
+        }
+      }
+    }
+  }
+
+  h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 60px;
+    margin: 0;
+    text-align: center;
+
+    @media screen and (max-width: 500px) {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0;
+    @media screen and (max-width: 500px) {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+  h3 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    @media screen and (max-width: 500px) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+}

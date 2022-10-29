@@ -1,5 +1,5 @@
 import React from "react";
-import { Intro, AboutMe, Projects } from "../components";
+import { Intro, AboutMe, Projects, LifeInfo, Contacts } from "../components";
 
 export const Home: React.FC = () => {
   return (
@@ -7,6 +7,8 @@ export const Home: React.FC = () => {
       <Intro />
       <AboutMe />
       <Projects />
+      <LifeInfo />
+      <Contacts />
     </div>
   );
 };

@@ -2,6 +2,7 @@ header {
   position: sticky;
   top: 0;
   background-color: white;
+  z-index: 10;
   .logo {
     font-style: normal;
     font-weight: 700;
@@ -30,20 +31,12 @@ header {
     }
   }
 
-  a > li {
-    list-style: none;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 150%;
-    cursor: pointer;
-  }
-
   .menu_btn {
     border: none;
     background: transparent;
     padding: 5px;
     cursor: pointer;
+    width: auto;
     @media screen and (min-width: 993px) {
       display: none;
     }
@@ -82,10 +75,5 @@ header {
     .hidden {
       padding: 0px 60px;
     }
-  }
-
-  a {
-    text-decoration: none;
-    color: black;
   }
 }

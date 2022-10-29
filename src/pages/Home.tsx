@@ -20,7 +20,6 @@ export const Home: React.FC = () => {
       <AboutMe />
       <Projects />
       <LifeInfo />
-      <section id="about"></section>
       <Contacts />
     </>
   );

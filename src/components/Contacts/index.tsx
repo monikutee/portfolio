@@ -4,11 +4,9 @@ import MAIL from "../../assets/mail.svg";
 import PHONE from "../../assets/phone.svg";
 import LINKEDIN from "../../assets/linkedin.svg";
 
-const Contacts: React.FC<{
-  reference: React.MutableRefObject<HTMLDivElement | null>;
-}> = ({ reference }) => {
+const Contacts: React.FC = () => {
   return (
-    <div className="contacts_root" ref={reference}>
+    <div className="contacts_root" id="contacts">
       <div className="title">
         <h1>KONTAKTAI</h1>
         <div className="divider" />

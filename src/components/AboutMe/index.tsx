@@ -1,29 +1,10 @@
 import React from "react";
 import "./aboutMe.scss";
+import { SKILLS } from "../../constants";
 
-const AboutMe: React.FC<{
-  reference: React.MutableRefObject<HTMLDivElement | null>;
-}> = ({ reference }) => {
-  const SKILLS = [
-    "React.js",
-    "TypeScript",
-    "JavaScript",
-    "SQL",
-    "Node.js",
-    "Next.js",
-    "HTML5",
-    "CSS3",
-    "Material UI",
-    "SASS",
-    "GIT",
-    "Responsive Design",
-    "Terminal",
-    "PHP",
-    "Socket.io",
-    "Elasticsearch",
-  ];
+const AboutMe: React.FC = () => {
   return (
-    <div className="about_me" ref={reference}>
+    <div className="about_me" id="about-me">
       <div className="about_me-title">
         <h1>APIE MANE</h1>
         <div className="divider" />

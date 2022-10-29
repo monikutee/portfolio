@@ -17,12 +17,19 @@ footer {
       flex-direction: column;
     }
   }
-  nav > li {
+  a > li {
     list-style: none;
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
+    cursor: pointer;
   }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
   p {
     font-weight: 400;
     font-size: 16px;

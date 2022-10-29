@@ -5,39 +5,14 @@ import { Project } from "./pages/Project";
 import { Header, Footer } from "./components";
 
 const App = () => {
-  const aboutMeRef = React.useRef<HTMLDivElement | null>(null);
-  const projectsRef = React.useRef<HTMLDivElement | null>(null);
-  const lifeInfoRef = React.useRef<HTMLDivElement | null>(null);
-  const contactsRef = React.useRef<HTMLDivElement | null>(null);
-
   return (
     <div className="App">
-      <Header
-        aboutMeRef={aboutMeRef}
-        projectsRef={projectsRef}
-        lifeInfoRef={lifeInfoRef}
-        contactsRef={contactsRef}
-      />
+      <Header />
       <Routes>
-        <Route
-          path="/"
-          element={
-            <Home
-              aboutMeRef={aboutMeRef}
-              projectsRef={projectsRef}
-              lifeInfoRef={lifeInfoRef}
-              contactsRef={contactsRef}
-            />
-          }
-        />
-        <Route path="project:id" element={<Project />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/project:id" element={<Project />} />
       </Routes>
-      <Footer
-        aboutMeRef={aboutMeRef}
-        projectsRef={projectsRef}
-        lifeInfoRef={lifeInfoRef}
-        contactsRef={contactsRef}
-      />
+      <Footer />
     </div>
   );
 };

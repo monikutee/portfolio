@@ -1,5 +1,7 @@
 import React from "react";
 import "./intro.scss";
+import { HashLink } from "react-router-hash-link";
+import { scrollWithOffset } from "../../helpers";
 
 const Intro: React.FC = () => {
   return (
@@ -13,7 +15,10 @@ const Intro: React.FC = () => {
           moderniai atvaizduoti tai saitvietėje. Esu kruopšti, atsakinga bei
           punktuali, tad Jūsų projekto programavimas yra gerose rankose!
         </p>
-        <button>PROKEJEKTAI</button>
+
+        <HashLink to="/#projects" scroll={(el) => scrollWithOffset(el)}>
+          <button>PROKEJEKTAI</button>
+        </HashLink>
       </div>
     </div>
   );

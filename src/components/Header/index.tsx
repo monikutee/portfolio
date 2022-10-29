@@ -2,7 +2,7 @@ import React from "react";
 import "./header.scss";
 import MENU from "../../assets/menu.svg";
 import { HashLink } from "react-router-hash-link";
-import { scrollWithOffset } from "../../helpers";
+import { scrollWithHeaderOffset } from "../../helpers";
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -16,7 +16,7 @@ const Header: React.FC = () => {
             to="/#about-me"
             scroll={(el) => {
               setIsOpen(false);
-              scrollWithOffset(el);
+              scrollWithHeaderOffset(el);
             }}
           >
             <li>APIE MANE</li>
@@ -25,7 +25,7 @@ const Header: React.FC = () => {
             to="/#projects"
             scroll={(el) => {
               setIsOpen(false);
-              scrollWithOffset(el);
+              scrollWithHeaderOffset(el);
             }}
           >
             <li>ASMENINIAI PROJEKTAI</li>
@@ -34,7 +34,7 @@ const Header: React.FC = () => {
             to="/#life-info"
             scroll={(el) => {
               setIsOpen(false);
-              scrollWithOffset(el);
+              scrollWithHeaderOffset(el);
             }}
           >
             <li>GYVENIMO APRAŠYMAS</li>
@@ -43,7 +43,7 @@ const Header: React.FC = () => {
             to="/#contacts"
             scroll={(el) => {
               setIsOpen(false);
-              scrollWithOffset(el);
+              scrollWithHeaderOffset(el);
             }}
           >
             <li>KONTAKTAI</li>
@@ -59,16 +59,19 @@ const Header: React.FC = () => {
           <a href="/">MONIKA PETRULEVIČ</a>
         </div>
         <nav className="desktop_nav">
-          <HashLink to="/#about-me" scroll={(el) => scrollWithOffset(el)}>
+          <HashLink to="/#about-me" scroll={(el) => scrollWithHeaderOffset(el)}>
             <li>APIE MANE</li>
           </HashLink>
-          <HashLink to="/#projects" scroll={(el) => scrollWithOffset(el)}>
+          <HashLink to="/#projects" scroll={(el) => scrollWithHeaderOffset(el)}>
             <li>ASMENINIAI PROJEKTAI</li>
           </HashLink>
-          <HashLink to="/#life-info" scroll={(el) => scrollWithOffset(el)}>
+          <HashLink
+            to="/#life-info"
+            scroll={(el) => scrollWithHeaderOffset(el)}
+          >
             <li>GYVENIMO APRAŠYMAS</li>
           </HashLink>
-          <HashLink to="/#contacts" scroll={(el) => scrollWithOffset(el)}>
+          <HashLink to="/#contacts" scroll={(el) => scrollWithHeaderOffset(el)}>
             <li>KONTAKTAI</li>
           </HashLink>
         </nav>

@@ -1,7 +1,7 @@
 const desktopHeader = 85;
 const mobileHeader = 280;
 
-export const scrollWithOffset = (el: any) => {
+export const scrollWithHeaderOffset = (el: any) => {
   const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
   const viewportWidth = Math.max(
     document.documentElement.clientWidth,
@@ -12,4 +12,9 @@ export const scrollWithOffset = (el: any) => {
   } else {
     window.scrollTo({ top: el.offsetTop - mobileHeader, behavior: "smooth" });
   }
+};
+
+export const scrollWithOffset = (el: any) => {
+  const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+  window.scrollTo({ top: yCoordinate - desktopHeader, behavior: "smooth" });
 };

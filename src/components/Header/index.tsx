@@ -12,16 +12,40 @@ const Header: React.FC = () => {
     return (
       <div className="hidden">
         <nav className="mobile_nav">
-          <HashLink to="/#about-me" scroll={(el) => scrollWithOffset(el)}>
+          <HashLink
+            to="/#about-me"
+            scroll={(el) => {
+              setIsOpen(false);
+              scrollWithOffset(el);
+            }}
+          >
             <li>APIE MANE</li>
           </HashLink>
-          <HashLink to="/#projects" scroll={(el) => scrollWithOffset(el)}>
+          <HashLink
+            to="/#projects"
+            scroll={(el) => {
+              setIsOpen(false);
+              scrollWithOffset(el);
+            }}
+          >
             <li>ASMENINIAI PROJEKTAI</li>
           </HashLink>
-          <HashLink to="/#life-info" scroll={(el) => scrollWithOffset(el)}>
+          <HashLink
+            to="/#life-info"
+            scroll={(el) => {
+              setIsOpen(false);
+              scrollWithOffset(el);
+            }}
+          >
             <li>GYVENIMO APRAŠYMAS</li>
           </HashLink>
-          <HashLink to="/#contacts" scroll={(el) => scrollWithOffset(el)}>
+          <HashLink
+            to="/#contacts"
+            scroll={(el) => {
+              setIsOpen(false);
+              scrollWithOffset(el);
+            }}
+          >
             <li>KONTAKTAI</li>
           </HashLink>
         </nav>

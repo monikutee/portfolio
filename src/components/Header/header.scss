@@ -41,8 +41,14 @@ header {
   .menu_btn {
     border: none;
     background: transparent;
+    padding: 5px;
     @media screen and (min-width: 993px) {
       display: none;
+    }
+    &:focus-visible {
+      outline: none;
+      border: 1px solid gray;
+      border-radius: 10px;
     }
   }
 

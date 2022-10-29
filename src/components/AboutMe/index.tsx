@@ -1,7 +1,9 @@
 import React from "react";
 import "./aboutMe.scss";
 
-const AboutMe: React.FC = () => {
+const AboutMe: React.FC<{
+  reference: React.MutableRefObject<HTMLDivElement | null>;
+}> = ({ reference }) => {
   const SKILLS = [
     "React.js",
     "TypeScript",
@@ -21,7 +23,7 @@ const AboutMe: React.FC = () => {
     "Elasticsearch",
   ];
   return (
-    <div className="about_me">
+    <div className="about_me" ref={reference}>
       <div className="about_me-title">
         <h1>APIE MANE</h1>
         <div className="divider" />

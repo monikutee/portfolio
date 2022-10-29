@@ -2,9 +2,11 @@ import React from "react";
 import "./lifeInfo.scss";
 import PHOTO from "../../assets/photo.svg";
 
-const LifeInfo: React.FC = () => {
+const LifeInfo: React.FC<{
+  reference: React.MutableRefObject<HTMLDivElement | null>;
+}> = ({ reference }) => {
   return (
-    <div className="life_info-root">
+    <div className="life_info-root" ref={reference}>
       <div className="title">
         <h1>GYVENIMO APRAŠYMAS</h1>
         <div className="divider" />

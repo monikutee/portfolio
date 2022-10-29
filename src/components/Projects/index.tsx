@@ -2,7 +2,9 @@ import React from "react";
 import "./projects.scss";
 import LAPTOP from "../../assets/laptop.svg";
 
-const Projects: React.FC = () => {
+const Projects: React.FC<{
+  reference: React.MutableRefObject<HTMLDivElement | null>;
+}> = ({ reference }) => {
   const PROJECTS = [
     {
       title: "Kalendorius",
@@ -19,7 +21,7 @@ const Projects: React.FC = () => {
   ];
 
   return (
-    <div className="root">
+    <div className="root" ref={reference}>
       <div className="title">
         <h1>APIE MANE</h1>
         <div className="divider" />

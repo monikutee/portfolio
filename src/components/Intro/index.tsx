@@ -17,7 +17,7 @@ const Intro: React.FC = () => {
         </p>
 
         <HashLink to="/#projects" scroll={(el) => scrollWithOffset(el)}>
-          <button>PROKEJEKTAI</button>
+          <button>PROJEKTAI</button>
         </HashLink>
       </div>
     </div>

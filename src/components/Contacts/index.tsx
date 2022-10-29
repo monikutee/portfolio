@@ -30,7 +30,7 @@ const Contacts: React.FC = () => {
           <img src={LINKEDIN} alt="mail" />
           <h2>LINKEDIN</h2>
           <a
-            href="www.linkedin.com/in/monikapetrulevic"
+            href="https://linkedin.com/in/monikapetrulevic"
             target="_blank"
             rel="noopener noreferrer"
           >

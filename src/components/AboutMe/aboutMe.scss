@@ -1,0 +1,116 @@
+.about_me {
+  min-height: calc(100vh - 85px);
+  background-color: #e6e6e6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  padding: 0px 130px;
+
+  @media screen and (max-width: 1200px) {
+    padding: 0px 60px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0px 30px;
+    gap: 40px;
+  }
+  .about_me-title {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    .divider {
+      height: 5px;
+      background-color: #bebebe;
+      width: 200px;
+    }
+  }
+
+  .about_me-info {
+    display: flex;
+    gap: 160px;
+
+    @media screen and (max-width: 992px) {
+      gap: 50px;
+    }
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    .skills_section,
+    .what_do_i_do {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      @media screen and (max-width: 768px) {
+        align-items: center;
+      }
+      .skils {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        @media screen and (max-width: 768px) {
+          justify-content: center;
+        }
+
+        .skill_item {
+          background-color: #bebebe;
+          border-radius: 3px;
+          padding: 5px 13px;
+        }
+      }
+    }
+  }
+
+  h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 60px;
+    margin: 0;
+    text-align: center;
+
+    @media screen and (max-width: 500px) {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+
+    @media screen and (max-width: 500px) {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+  h3 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 20px;
+    @media screen and (max-width: 500px) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-left: 15px;
+    margin-bottom: 50px;
+    li {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+}

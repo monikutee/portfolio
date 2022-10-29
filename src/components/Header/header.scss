@@ -1,0 +1,78 @@
+header {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  .logo {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .desktop_nav {
+    display: flex;
+    gap: 20px;
+
+    @media screen and (max-width: 992px) {
+      display: none;
+    }
+  }
+
+  .mobile_nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 25px;
+
+    li {
+      font-size: 20px;
+    }
+  }
+
+  nav > li {
+    list-style: none;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  .menu_btn {
+    border: none;
+    background: transparent;
+    @media screen and (min-width: 993px) {
+      display: none;
+    }
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 0px 120px;
+
+    @media screen and (max-width: 1200px) {
+      padding: 0px 60px;
+    }
+    @media screen and (max-width: 500px) {
+      padding: 0px 20px;
+    }
+  }
+
+  &.collapsible {
+    max-height: 85px;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+
+    &.openCollapsible {
+      max-height: 300px;
+      transition: max-height 0.5s ease-in;
+    }
+
+    .hidden {
+      padding: 0px 60px;
+    }
+  }
+}

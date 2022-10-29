@@ -6,7 +6,7 @@ const Projects: React.FC = () => {
   return (
     <div className="root" id="projects">
       <div className="title">
-        <h1>APIE MANE</h1>
+        <h1>ASMENINIAI PROJEKTAI</h1>
         <div className="divider" />
       </div>
       <div className="projects">

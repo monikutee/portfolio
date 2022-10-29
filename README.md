@@ -5,3 +5,7 @@ Pradžioje reikia atsiųsti reikalingus npm package:
 Tada galima paleisti projektą:
 
 ### `npm start`
+
+Projektas jau yra paleistas nemokamame serveryje:
+
+### https://steady-seahorse-31ed8f.netlify.app/

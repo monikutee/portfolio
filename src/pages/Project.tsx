@@ -28,7 +28,7 @@ const ArrowButtonPrevious = (props: any) => {
 
 const MAIN_SETTINGS = {
   infinite: true,
-  slidesToShow: 1,
+  slidesToShow: 3,
   slidesToScroll: 1,
   swipeToSlide: true,
   centerMode: true,
@@ -38,7 +38,7 @@ const MAIN_SETTINGS = {
 
   responsive: [
     {
-      breakpoint: 700,
+      breakpoint: 1600,
       settings: {
         centerMode: true,
         slidesToShow: 1,

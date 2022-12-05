@@ -18,14 +18,14 @@
     justify-content: center;
 
     img {
-      width: 90%;
-      // border: 1px solid #ee4074;
+      max-width: 90%;
       border-radius: 15px;
-      height: 300px;
-
+      max-height: 600px;
+      @media screen and (max-width: 992px) {
+        height: 300px;
+      }
       @media screen and (max-width: 500px) {
         height: 150px;
-        width: 90%;
       }
     }
   }

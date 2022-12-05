@@ -9,11 +9,14 @@
   padding: 0px 130px;
   position: relative;
   z-index: 1;
+  transition: padding 0.5s ease-out;
 
   @media screen and (max-width: 1200px) {
+    transition: padding 0.5s ease-out;
     padding: 0px 60px;
   }
   @media screen and (max-width: 768px) {
+    transition: padding 0.5s ease-out;
     padding: 0px 30px;
     gap: 40px;
   }

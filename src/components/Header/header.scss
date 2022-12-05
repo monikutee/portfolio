@@ -72,6 +72,7 @@ header {
     &.openCollapsible {
       max-height: 300px;
       transition: max-height 0.5s ease-in;
+      box-shadow: 0 -5px 20px 0px;
     }
 
     .hidden {

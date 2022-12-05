@@ -1,11 +1,12 @@
 .intro {
   height: calc(100vh - 85px);
-  background-color: #f8f8f8;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 30px;
+  margin-top: 85px;
+  position: relative;
 
   .intro_info {
     display: flex;
@@ -17,6 +18,60 @@
 
     p {
       text-align: center;
+    }
+  }
+
+  .green_circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-35%, -35%);
+
+    @media screen and (max-width: 992px) {
+      width: 170px;
+    }
+  }
+  .red_ball {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(65%, 65%);
+    transition: all 2s ease-out;
+
+    @media screen and (max-width: 992px) {
+      transition: all 2s ease-out;
+      width: 65px;
+    }
+  }
+
+  .points {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(0%, 50%);
+    height: 250px;
+    transition: height 2s ease-out;
+
+    @media screen and (max-width: 992px) {
+      transition: height 2s ease-out;
+      height: 120px;
+    }
+  }
+
+  .triangles {
+    position: absolute;
+    bottom: 35%;
+    width: 25%;
+    right: 100px;
+    transform: translate(0%, 50%);
+    transition: all 2s ease-out;
+
+    @media screen and (max-width: 992px) {
+      transition: all 2s ease-out;
+
+      right: 20px;
+      top: 0px;
+      transform: none;
     }
   }
 }

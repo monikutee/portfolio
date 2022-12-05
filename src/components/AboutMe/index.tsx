@@ -3,6 +3,7 @@ import "./aboutMe.scss";
 import { SKILLS } from "../../constants";
 
 const AboutMe: React.FC = () => {
+  const COLORS = ["#F9E95E", "#83E573", "#EE4074", "#45AAF4"];
   return (
     <div className="about_me" id="about-me">
       <div className="about_me-title">
@@ -14,7 +15,13 @@ const AboutMe: React.FC = () => {
           <h3>Mano įgūdžiai</h3>
           <div className="skils">
             {SKILLS.map((item, key) => (
-              <div key={key} className="skill_item">
+              <div
+                key={key}
+                className="skill_item"
+                style={{
+                  borderColor: COLORS[Math.floor(Math.random() * (3 + 1))],
+                }}
+              >
                 {item}
               </div>
             ))}

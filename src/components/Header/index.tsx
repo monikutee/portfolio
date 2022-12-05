@@ -3,6 +3,7 @@ import "./header.scss";
 import MENU from "../../assets/menu.svg";
 import { HashLink } from "react-router-hash-link";
 import { scrollWithHeaderOffset } from "../../helpers";
+import LOGO from "../../assets/logo.svg";
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -56,7 +57,9 @@ const Header: React.FC = () => {
     <header className={`collapsible ${isOpen ? "openCollapsible" : ""}`}>
       <div className="header">
         <div className="logo">
-          <a href="/">MONIKA PETRULEVIČ</a>
+          <a href="/">
+            <img src={LOGO} alt="logo" />
+          </a>
         </div>
         <nav className="desktop_nav">
           <HashLink to="/#about-me" scroll={(el) => scrollWithHeaderOffset(el)}>

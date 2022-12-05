@@ -1,12 +1,14 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { PROJECTS, PROJECT_PHOTOS } from "../constants";
+import { PROJECTS } from "../constants";
 import Slider from "react-slick";
 import "./project.scss";
 
 import LEFT from "../assets/leftChevron.svg";
 import RIGHT from "../assets/rightChevron.svg";
-import LAPTOP from "../assets/laptop.svg";
+import YELLOW_CIRCLE from "../assets/decorations/yellow_circle_plain.svg";
+import GREEN_CIRCLE from "../assets/decorations/green_circle.svg";
+import RED_BALL from "../assets/decorations/red_ball.svg";
 
 const ArrowButtonNext = (props: any) => {
   return (
@@ -26,7 +28,7 @@ const ArrowButtonPrevious = (props: any) => {
 
 const MAIN_SETTINGS = {
   infinite: true,
-  slidesToShow: 3,
+  slidesToShow: 1,
   slidesToScroll: 1,
   swipeToSlide: true,
   centerMode: true,
@@ -46,6 +48,7 @@ const MAIN_SETTINGS = {
     },
   ],
 };
+const COLORS = ["#F9E95E", "#83E573", "#EE4074"];
 
 export const Project: React.FC = () => {
   const { id } = useParams();
@@ -56,6 +59,7 @@ export const Project: React.FC = () => {
     image: string;
     stack: string[];
     link: string;
+    photos: string[];
   } | null>(null);
 
   React.useEffect(() => {
@@ -73,14 +77,14 @@ export const Project: React.FC = () => {
       <h1>{active?.title}</h1>
       <div className="project_photos">
         <Slider {...MAIN_SETTINGS}>
-          {PROJECT_PHOTOS.map((photo, key) => (
+          {active.photos.map((photo, key) => (
             <div key={key} className="custom_slide">
               <img src={photo} alt="project" />
             </div>
           ))}
         </Slider>
       </div>
-      <img src={LAPTOP} alt="project laptop" className="laptop_photo" />
+      <img src={active.image} alt="project laptop" className="laptop_photo" />
       <div className="project_info">
         <div>
           <h3>Projekto aprašymas</h3>
@@ -90,7 +94,13 @@ export const Project: React.FC = () => {
           <h3>Naudotos technologijos</h3>
           <div className="skils">
             {active.stack.map((item, key) => (
-              <div key={key} className="skill_item">
+              <div
+                key={key}
+                className="skill_item"
+                style={{
+                  borderColor: COLORS[Math.floor(Math.random() * (2 + 1))],
+                }}
+              >
                 {item}
               </div>
             ))}
@@ -108,6 +118,9 @@ export const Project: React.FC = () => {
           </div>
         </div>
       </div>
+      <img src={GREEN_CIRCLE} alt="" className="green_circle" />
+      <img src={RED_BALL} alt="" className="red_ball" />
+      <img src={YELLOW_CIRCLE} alt="" className="yellow_circle" />
     </div>
   ) : (
     <h1>TOKIO PROJEKTO NĖRA</h1>

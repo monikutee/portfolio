@@ -3,17 +3,30 @@
   flex-direction: column;
   align-items: center;
   gap: 50px;
-  margin-top: 50px;
+  margin-top: 135px;
+  position: relative;
 
   .project_photos {
     width: 80%;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
   }
   .custom_slide {
     position: relative;
     display: flex !important;
     justify-content: center;
+
     img {
       width: 90%;
+      // border: 1px solid #ee4074;
+      border-radius: 15px;
+      height: 300px;
+
+      @media screen and (max-width: 500px) {
+        height: 150px;
+        width: 90%;
+      }
     }
   }
 
@@ -57,7 +70,8 @@
       gap: 10px;
 
       .skill_item {
-        background-color: #bebebe;
+        background-color: #ffff;
+        border: 1px solid;
         border-radius: 3px;
         padding: 5px 13px;
       }
@@ -69,12 +83,49 @@
 
       .go_back {
         background-color: white;
-        color: #bebebe;
-        border: 2px solid #bebebe;
+        color: #45aaf4;
+        border: 2px solid #45aaf4;
       }
     }
     h3 {
       margin-bottom: 20px;
+    }
+  }
+
+  .yellow_circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    height: 300px;
+    transition: height 2s ease-out;
+
+    @media screen and (max-width: 768px) {
+      transition: height 2s ease-out;
+      height: 150px;
+    }
+  }
+
+  .green_circle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(35%, -75%);
+
+    @media screen and (max-width: 992px) {
+      width: 170px;
+    }
+  }
+  .red_ball {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-45%, -30%);
+    transition: all 2s ease-out;
+
+    @media screen and (max-width: 992px) {
+      transition: all 2s ease-out;
+      width: 65px;
     }
   }
 }

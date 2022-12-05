@@ -2,6 +2,10 @@ import React from "react";
 import "./intro.scss";
 import { HashLink } from "react-router-hash-link";
 import { scrollWithOffset } from "../../helpers";
+import GREEN_CIRCLE from "../../assets/decorations/green_circle.svg";
+import RED_BALL from "../../assets/decorations/red_ball.svg";
+import POINTS from "../../assets/decorations/points.svg";
+import TRIANGLES from "../../assets/decorations/triangles.svg";
 
 const Intro: React.FC = () => {
   return (
@@ -20,6 +24,10 @@ const Intro: React.FC = () => {
           <button>PROJEKTAI</button>
         </HashLink>
       </div>
+      <img src={GREEN_CIRCLE} alt="" className="green_circle" />
+      <img src={RED_BALL} alt="" className="red_ball" />
+      <img src={TRIANGLES} alt="" className="triangles" />
+      <img src={POINTS} alt="" className="points" />
     </div>
   );
 };

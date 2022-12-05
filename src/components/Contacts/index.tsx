@@ -4,6 +4,8 @@ import MAIL from "../../assets/mail.svg";
 import PHONE from "../../assets/phone.svg";
 import LINKEDIN from "../../assets/linkedin.svg";
 
+import TRIANGLES from "../../assets/decorations/contacts_triangles.svg";
+
 const Contacts: React.FC = () => {
   return (
     <div className="contacts_root" id="contacts">
@@ -38,6 +40,8 @@ const Contacts: React.FC = () => {
           </a>
         </div>
       </div>
+      <img src={TRIANGLES} alt="" className="triangles_first" />
+      <img src={TRIANGLES} alt="" className="triangles_second" />
     </div>
   );
 };

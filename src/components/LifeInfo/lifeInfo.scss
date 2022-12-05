@@ -1,12 +1,14 @@
 .life_info-root {
   min-height: calc(100vh - 85px);
-  background-color: #e6e6e6;
+  background-color: #f5f5f5;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 70px;
   padding: 0px 130px;
+  position: relative;
+  z-index: 1;
 
   @media screen and (max-width: 1200px) {
     padding: 0px 60px;
@@ -24,7 +26,7 @@
     gap: 10px;
     .divider {
       height: 5px;
-      background-color: #bebebe;
+      background-color: #83e573;
       width: 200px;
     }
   }
@@ -34,16 +36,22 @@
     gap: 100px;
     margin-bottom: 50px;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 992px) {
       gap: 50px;
       width: 100%;
       flex-direction: column;
+      align-items: center;
     }
 
     .section {
       display: flex;
       flex-direction: column;
       gap: 15px;
+
+      .certificate {
+        width: 315px;
+        border-radius: 15px;
+      }
 
       .steps {
         display: flex;
@@ -56,18 +64,40 @@
           .ball {
             height: 14px;
             width: 14px;
-            border: 2px solid black;
+            border: 2px solid #ee4074;
             border-radius: 100%;
           }
 
           .line {
             height: 90%;
             margin-top: 10px;
-            background: black;
+            background: #ee4074;
             width: 2px;
           }
         }
       }
     }
+  }
+
+  .blue_circle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    z-index: -1;
+    height: 400px;
+    transition: all 2s ease-out;
+
+    @media screen and (max-width: 1200px) {
+      transition: all 2s ease-out;
+      // transition: right 2s ease-out;
+      right: 100%;
+      height: 130px;
+    }
+
+    // @media screen and (max-width: 992px) {
+    //   transition: height 0.5s ease-out;
+    //   height: 130px;
+    // }
   }
 }

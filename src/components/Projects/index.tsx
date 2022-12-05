@@ -1,6 +1,8 @@
 import React from "react";
 import "./projects.scss";
 import { PROJECTS } from "../../constants";
+import YELLOW_CIRCLE from "../../assets/decorations/yellow_circle.svg";
+import RED_BALL from "../../assets/decorations/red_ball.svg";
 
 const Projects: React.FC = () => {
   return (
@@ -12,7 +14,11 @@ const Projects: React.FC = () => {
       <div className="projects">
         {PROJECTS.map((project, index) => (
           <div className="project_item" key={index}>
-            <img src={project.image} alt={project.title} />
+            <img
+              src={project.image}
+              alt={project.title}
+              className="project_item-img"
+            />
             <div className="project_item-text">
               <h3>{project.title}</h3>
               <p>{project.body}</p>
@@ -23,6 +29,8 @@ const Projects: React.FC = () => {
           </div>
         ))}
       </div>
+      <img src={YELLOW_CIRCLE} alt="" className="yellow_circle" />
+      <img src={RED_BALL} alt="" className="red_ball" />
     </div>
   );
 };

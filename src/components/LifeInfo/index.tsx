@@ -1,6 +1,9 @@
 import React from "react";
 import "./lifeInfo.scss";
-import PHOTO from "../../assets/photo.svg";
+import CERTIFICATE_1 from "../../assets/certificates/certificate1.jpg";
+import CERTIFICATE_2 from "../../assets/certificates/certificate2.png";
+
+import BLUE_CIRCLE from "../../assets/decorations/blue_circle.svg";
 
 const LifeInfo: React.FC = () => {
   return (
@@ -39,8 +42,16 @@ const LifeInfo: React.FC = () => {
         </div>
         <div className="section">
           <h3>Sertifikatai</h3>
-          <img src={PHOTO} alt="projects_photo" />
-          <img src={PHOTO} alt="projects_photo" />
+          <img
+            src={CERTIFICATE_1}
+            alt="certificate one"
+            className="certificate"
+          />
+          <img
+            src={CERTIFICATE_2}
+            alt="certificage two"
+            className="certificate"
+          />
         </div>
         <div className="section">
           <h3>Patirtis</h3>
@@ -84,6 +95,7 @@ const LifeInfo: React.FC = () => {
           </div>
         </div>
       </div>
+      <img src={BLUE_CIRCLE} alt="" className="blue_circle" />
     </div>
   );
 };

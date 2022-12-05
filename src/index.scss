@@ -10,8 +10,12 @@ code {
     monospace;
 }
 
+.App {
+  overflow: hidden;
+}
+
 button {
-  background: #bebebe;
+  background: #45aaf4;
   border-radius: 3px;
   border: none;
   color: white;
@@ -41,7 +45,7 @@ a > li {
 h1 {
   font-style: normal;
   font-weight: 700;
-  font-size: 48px;
+  font-size: 60px;
   line-height: 60px;
   margin: 0;
   text-align: center;

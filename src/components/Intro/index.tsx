@@ -21,12 +21,12 @@ const Intro: React.FC = () => {
         </p>
 
         <HashLink to="/#projects" scroll={(el) => scrollWithOffset(el)}>
-          <button>PROJEKTAI</button>
+          <button className="pulse">PROJEKTAI</button>
         </HashLink>
       </div>
       <img src={GREEN_CIRCLE} alt="" className="green_circle" />
       <img src={RED_BALL} alt="" className="red_ball" />
-      <img src={TRIANGLES} alt="" className="triangles" />
+      <img src={TRIANGLES} alt="" className={`triangles`} />
       <img src={POINTS} alt="" className="points" />
     </div>
   );

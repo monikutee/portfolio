@@ -19,6 +19,23 @@
     p {
       text-align: center;
     }
+
+    .pulse {
+      outline: 1px solid #45aaf4;
+      animation: outline-pulse 1s infinite;
+
+      @keyframes outline-pulse {
+        from,
+        to {
+          outline-offset: 0.3em;
+          outline-width: 0.12em;
+        }
+        50% {
+          outline-offset: 0.16em;
+          outline-width: 0.16em;
+        }
+      }
+    }
   }
 
   .green_circle {

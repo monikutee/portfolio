@@ -5,3 +5,4 @@ export { default as AboutMe } from "./AboutMe";
 export { default as Projects } from "./Projects";
 export { default as LifeInfo } from "./LifeInfo";
 export { default as Contacts } from "./Contacts";
+export { default as NotFound } from "./NotFound";

@@ -8,4 +8,4 @@ Tada galima paleisti projektą:
 
 Projektas jau yra paleistas nemokamame serveryje:
 
-### https://steady-seahorse-31ed8f.netlify.app/
+### https://m-petrulevic-mkdfs20-portfolio.netlify.app/

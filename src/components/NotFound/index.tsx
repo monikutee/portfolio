@@ -33,7 +33,7 @@ const NotFound: React.FC = () => {
                 to="1"
                 values="1; 10; 1"
                 begin="0s"
-                dur="2s"
+                dur="3s"
                 repeatCount="indefinite"
               />
             </circle>
